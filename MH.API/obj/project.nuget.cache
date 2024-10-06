@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kn+xqiB5o2Q=",
+  "dgSpecHash": "d4S7LXodkqs=",
   "success": true,
-  "projectFilePath": "F:\\MH.API\\MH.API\\MH.API.csproj",
+  "projectFilePath": "F:\\MH\\MH.API\\MH.API\\MH.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\UseR\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\UseR\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",

@@ -969,6 +969,23 @@
         "runtime": {
           "bin/placeholder/MH.Common.dll": {}
         }
+      },
+      "MH.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MH.Common": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.32",
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "bin/placeholder/MH.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MH.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -2435,12 +2452,18 @@
       "type": "project",
       "path": "../MH.Common/MH.Common.csproj",
       "msbuildProject": "../MH.Common/MH.Common.csproj"
+    },
+    "MH.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../MH.DataAccess/MH.DataAccess.csproj",
+      "msbuildProject": "../MH.DataAccess/MH.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BCrypt.Net-Next >= 4.0.3",
       "MH.Common >= 1.0.0",
+      "MH.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 6.0.32",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.32",
@@ -2453,11 +2476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
+      "projectUniqueName": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
       "projectName": "MH.Services",
-      "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
+      "projectPath": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
       "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-      "outputPath": "F:\\MH.API\\MH.Services\\obj\\",
+      "outputPath": "F:\\MH\\MH.API\\MH.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2475,8 +2498,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
-              "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj"
+            "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
+              "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+            },
+            "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+              "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
             }
           }
         }

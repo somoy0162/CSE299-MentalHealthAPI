@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\MH.API\\MH.API\\MH.API.csproj": {}
+    "F:\\MH\\MH.API\\MH.API\\MH.API.csproj": {}
   },
   "projects": {
-    "F:\\MH.API\\MH.API\\MH.API.csproj": {
+    "F:\\MH\\MH.API\\MH.API\\MH.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH.API\\MH.API\\MH.API.csproj",
+        "projectUniqueName": "F:\\MH\\MH.API\\MH.API\\MH.API.csproj",
         "projectName": "MH.API",
-        "projectPath": "F:\\MH.API\\MH.API\\MH.API.csproj",
+        "projectPath": "F:\\MH\\MH.API\\MH.API\\MH.API.csproj",
         "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH.API\\MH.API\\obj\\",
+        "outputPath": "F:\\MH\\MH.API\\MH.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-                "projectPath": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+              "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+                "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
               },
-              "F:\\MH.API\\MH.Services\\MH.Services.csproj": {
-                "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj"
+              "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj": {
+                "projectPath": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
         "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH.API\\MH.Common\\obj\\",
+        "outputPath": "F:\\MH\\MH.API\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,14 +164,14 @@
         }
       }
     },
-    "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+    "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "projectUniqueName": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
         "projectName": "MH.DataAccess",
-        "projectPath": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
         "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH.API\\MH.DataAccess\\obj\\",
+        "outputPath": "F:\\MH\\MH.API\\MH.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -188,7 +188,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -243,14 +247,14 @@
         }
       }
     },
-    "F:\\MH.API\\MH.Services\\MH.Services.csproj": {
+    "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
+        "projectUniqueName": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
         "projectName": "MH.Services",
-        "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
+        "projectPath": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
         "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH.API\\MH.Services\\obj\\",
+        "outputPath": "F:\\MH\\MH.API\\MH.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -268,8 +272,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj"
+              "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+              },
+              "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+                "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
               }
             }
           }

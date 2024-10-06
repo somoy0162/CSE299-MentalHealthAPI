@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\MH.API\\MH.Common\\MH.Common.csproj": {}
+    "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {}
   },
   "projects": {
-    "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
         "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH.API\\MH.Common\\obj\\",
+        "outputPath": "F:\\MH\\MH.API\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
