@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj": {}
+    "F:\\MH.API\\MH.API\\MH.API.csproj": {}
   },
   "projects": {
-    "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj": {
+    "F:\\MH.API\\MH.API\\MH.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj",
+        "projectUniqueName": "F:\\MH.API\\MH.API\\MH.API.csproj",
         "projectName": "MH.API",
-        "projectPath": "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Datavanced\\MH.API\\MH.API\\obj\\",
+        "projectPath": "F:\\MH.API\\MH.API\\MH.API.csproj",
+        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
+        "outputPath": "F:\\MH.API\\MH.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +22,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-                "projectPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+              "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+                "projectPath": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
               },
-              "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj": {
-                "projectPath": "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj"
+              "F:\\MH.API\\MH.Services\\MH.Services.csproj": {
+                "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj"
               }
             }
           }
@@ -84,21 +85,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Datavanced\\MH.API\\MH.Common\\obj\\",
+        "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj",
+        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
+        "outputPath": "F:\\MH.API\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,6 +107,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -158,21 +160,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+    "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "projectUniqueName": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
         "projectName": "MH.DataAccess",
-        "projectPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\obj\\",
+        "projectPath": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
+        "outputPath": "F:\\MH.API\\MH.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,16 +182,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -240,21 +239,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj": {
+    "F:\\MH.API\\MH.Services\\MH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj",
+        "projectUniqueName": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
         "projectName": "MH.Services",
-        "projectPath": "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Datavanced\\MH.API\\MH.Services\\obj\\",
+        "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj",
+        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
+        "outputPath": "F:\\MH.API\\MH.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -262,17 +261,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj"
-              },
-              "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-                "projectPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+              "F:\\MH.API\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "F:\\MH.API\\MH.Common\\MH.Common.csproj"
               }
             }
           }
@@ -329,7 +326,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,8 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
@@ -16,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MH.Common\MH.Common.csproj" />
-    <ProjectReference Include="..\MH.DataAccess\MH.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

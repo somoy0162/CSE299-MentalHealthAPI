@@ -1115,7 +1115,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "MH.Common": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.32",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.32",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
@@ -1134,7 +1133,6 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "MH.Common": "1.0.0",
-          "MH.DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.32",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.32",
@@ -3028,19 +3026,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\UseR\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj",
+      "projectUniqueName": "F:\\MH.API\\MH.API\\MH.API.csproj",
       "projectName": "MH.API",
-      "projectPath": "D:\\Datavanced\\MH.API\\MH.API\\MH.API.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\Datavanced\\MH.API\\MH.API\\obj\\",
+      "projectPath": "F:\\MH.API\\MH.API\\MH.API.csproj",
+      "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
+      "outputPath": "F:\\MH.API\\MH.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3048,17 +3046,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-              "projectPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+            "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+              "projectPath": "F:\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
             },
-            "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj": {
-              "projectPath": "D:\\Datavanced\\MH.API\\MH.Services\\MH.Services.csproj"
+            "F:\\MH.API\\MH.Services\\MH.Services.csproj": {
+              "projectPath": "F:\\MH.API\\MH.Services\\MH.Services.csproj"
             }
           }
         }
@@ -3110,7 +3109,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
