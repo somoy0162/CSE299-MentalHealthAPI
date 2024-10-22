@@ -13,5 +13,8 @@ namespace MH.Common.VM
         public string? Token { get; set; }
         public int SystemUserID { get; set; } = 0;
         public int? Role { get; set; }
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? PhoneNumber { get; set; }
     }
 }
