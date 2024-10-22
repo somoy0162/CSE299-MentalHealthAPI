@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {}
+    "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {}
   },
   "projects": {
-    "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.Common\\obj\\",
+        "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Datavanced\\MH.API\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,21 +74,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+    "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
         "projectName": "MH.DataAccess",
-        "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.DataAccess\\obj\\",
+        "projectPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\Datavanced\\MH.API\\MH.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,15 +96,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+              "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj"
               }
             }
           }
@@ -158,7 +156,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
