@@ -1096,13 +1096,45 @@
           }
         }
       },
+      "MH.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Newtonsoft.Json": "13.0.2",
+          "System.IdentityModel.Tokens.Jwt": "6.8.0"
+        },
+        "compile": {
+          "bin/placeholder/MH.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MH.Common.dll": {}
+        }
+      },
+      "MH.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MH.Common": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.32",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.32",
+          "Microsoft.Extensions.Configuration.Json": "6.0.0",
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "bin/placeholder/MH.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MH.DataAccess.dll": {}
+        }
+      },
       "MH.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
-          "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": "1.0.0",
-          "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj": "1.0.0",
+          "MH.Common": "1.0.0",
+          "MH.DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.32",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.32",
@@ -2970,6 +3002,16 @@
         "version.txt"
       ]
     },
+    "MH.Common/1.0.0": {
+      "type": "project",
+      "path": "../MH.Common/MH.Common.csproj",
+      "msbuildProject": "../MH.Common/MH.Common.csproj"
+    },
+    "MH.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../MH.DataAccess/MH.DataAccess.csproj",
+      "msbuildProject": "../MH.DataAccess/MH.DataAccess.csproj"
+    },
     "MH.Services/1.0.0": {
       "type": "project",
       "path": "../MH.Services/MH.Services.csproj",
@@ -2978,7 +3020,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj",
+      "MH.DataAccess >= 1.0.0",
       "MH.Services >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.33",
       "Newtonsoft.Json >= 13.0.2",
@@ -3072,25 +3114,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "pTwLhz6KcZg=",
-  "success": false,
+  "dgSpecHash": "R9GNdk3qOss=",
+  "success": true,
   "projectFilePath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\MH.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
@@ -66,24 +66,5 @@
     "C:\\Users\\USER\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }
