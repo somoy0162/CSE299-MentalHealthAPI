@@ -44,17 +44,5 @@ namespace MH.API.Controllers
         {
             return await _securityService.Register(objVMRegister);
         }
-
-        //[HttpGet("SendEmailForgotPassword/{userName}")]
-        //public async Task<ResponseMessage> SendEmailForgotPassword(string userName)
-        //{
-        //    return await _systemUserService.SendMailForgotPassword(userName);
-        //}
-
-        [HttpPost("UpdatePassword")]
-        public async Task<ResponseMessage> Updatepassword(VMForgotPassword vmForgotPassword)
-        {
-            return await _systemUserService.UpdatePassword(vmForgotPassword);
-        }
     }
 }
