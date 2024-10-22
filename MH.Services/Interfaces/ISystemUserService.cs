@@ -1,4 +1,4 @@
-﻿using MH.Common.DTO;
+using MH.Common.DTO;
 using MH.Common.Models;
 using MH.Common.VM;
 using System;
@@ -20,3 +20,4 @@ namespace MH.Services.Interfaces
         Task<ResponseMessage> GetAllGender();
     }
 }
+
