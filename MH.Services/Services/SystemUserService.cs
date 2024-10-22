@@ -1,4 +1,4 @@
-﻿using MH.Common.Constants;
+using MH.Common.Constants;
 using MH.Common.DTO;
 using MH.Common.Enums;
 using MH.Common.Models;
@@ -7,6 +7,8 @@ using MH.DataAccess;
 using MH.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,7 +48,11 @@ namespace MH.Services.Services
                         RoleName = _dbContext.Role
                                     .Where(r => r.RoleID == x.Role)
                                     .Select(r => r.RoleName)
-                                    .FirstOrDefault()
+                                    .FirstOrDefault(),
+                        GenderName = _dbContext.Gender
+                                      .Where(g => g.GenderID == x.Gender)
+                                      .Select(g => g.GenderName)
+                                      .FirstOrDefault()
                     })
                     .ToListAsync();
 
@@ -162,6 +168,96 @@ namespace MH.Services.Services
                 responseMessage.Message = ex.Message;
                 responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
             }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> UpdatePersonalDetails(VMLogin user)
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                var existing = await _dbContext
+                    .SystemUsers
+                    .Where(x => x.ID == user.SystemUserID)
+                    .FirstOrDefaultAsync();
+
+                existing.Name = user.Name;
+                existing.PhoneNumber = user.PhoneNumber;
+                existing.Email = user.Email;
+
+                _dbContext.Update(existing);
+                await _dbContext.SaveChangesAsync();
+                responseMessage.ResponseObj = existing;
+                responseMessage.Message = "Save Changes successfully";
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> UpdatePassword(VMPasswordChange param)
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                if (param.NewPassword != param.ConfirmPassword)
+                {
+                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+                    responseMessage.Message = "New password and confirm password doesn't match";
+                    return responseMessage;
+                }
+
+                SystemUsers existing = await _dbContext
+                    .SystemUsers
+                    .Where(x => x.ID == param.SystemUserID)
+                    .FirstOrDefaultAsync();
+
+                if (!BCrypt.Net.BCrypt.Verify(param.CurrentPassword, existing.Password))
+                {
+                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+                    responseMessage.Message = "Current password incorrect";
+                    return responseMessage;
+                }
+
+                existing.Password = BCrypt.Net.BCrypt.HashPassword(param.NewPassword);
+
+                _dbContext.Update(existing);
+                await _dbContext.SaveChangesAsync();
+                responseMessage.ResponseObj = existing;
+                responseMessage.Message = "Save password successfully";
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> GetAllGender()
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                List<Gender> genders = new List<Gender>();
+                genders = await _dbContext
+                    .Gender
+                    .OrderBy(x => x.GenderID)
+                    .ToListAsync();
+                responseMessage.ResponseObj = genders;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+
             return responseMessage;
         }
     }

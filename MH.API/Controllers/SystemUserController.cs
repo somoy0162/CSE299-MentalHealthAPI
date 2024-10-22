@@ -1,6 +1,8 @@
-﻿using MH.Common.DTO;
+using MH.Common.DTO;
 using MH.Common.Models;
+using MH.Common.VM;
 using MH.Services.Interfaces;
+using MH.Services.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +41,24 @@ namespace MH.API.Controllers
         public async Task<ResponseMessage> DeleteSystemUserById(int userID)
         {
             return await _systemUserService.DeleteSystemUserById(userID);
+        }
+
+        [HttpPost("UpdatePersonalDetails")]
+        public async Task<ResponseMessage> UpdatePersonalDetails(VMLogin user)
+        {
+            return await _systemUserService.UpdatePersonalDetails(user);
+        }
+
+        [HttpPost("UpdatePassword")]
+        public async Task<ResponseMessage> UpdatePassword(VMPasswordChange param)
+        {
+            return await _systemUserService.UpdatePassword(param);
+        }
+
+        [HttpGet("GetAllGender")]
+        public async Task<ResponseMessage> GetAllGender()
+        {
+            return await _systemUserService.GetAllGender();
         }
     }
 }
