@@ -1,4 +1,4 @@
-﻿using MH.Common.DTO;
+using MH.Common.DTO;
 using MH.Common.Models;
 using MH.Common.VM;
 using System;
@@ -15,5 +15,9 @@ namespace MH.Services.Interfaces
         Task<ResponseMessage> SaveSystemUser(SystemUsers user);
         Task<ResponseMessage> GetSystemUserById(int userID);
         Task<ResponseMessage> DeleteSystemUserById(int userID);
+        Task<ResponseMessage> UpdatePersonalDetails(VMLogin users);
+        Task<ResponseMessage> UpdatePassword(VMPasswordChange param);
+        Task<ResponseMessage> GetAllGender();
     }
 }
+
