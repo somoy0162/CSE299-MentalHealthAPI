@@ -17,6 +17,10 @@ namespace MH.Services
             services.AddScoped<ISecurityService, SecurityService>();
             services.AddScoped<IUserSessionService, UserSessionService>();
             services.AddScoped<ISystemUserService, SystemUserService>();
+            services.AddScoped<IRoleService, RoleService>();
+            services.AddScoped<IPermissionService, PermissionService>();
+            services.AddScoped<IActionsService, ActionsService>();
+            services.AddScoped<ICounselorDirectoryService, CounselorDirectoryService>();
         }
     }
 }
