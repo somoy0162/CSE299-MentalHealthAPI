@@ -31,5 +31,11 @@ namespace MH.Common.Enums
             Register = 6,
             Logout = 7,
         }
+        public enum UserType
+        {
+            Admin = 1,
+            Counselor = 2,
+            Patient = 3
+        }
     }
 }
