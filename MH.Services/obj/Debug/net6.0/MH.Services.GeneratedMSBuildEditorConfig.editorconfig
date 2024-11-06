@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MH.Services
-build_property.ProjectDir = F:\MH\MH.API\MH.Services\
+build_property.ProjectDir = G:\Projects\CSE299-MentalHealthAPI\MH.Services\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
