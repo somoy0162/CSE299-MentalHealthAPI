@@ -22,6 +22,7 @@ namespace MH.DataAccess
         public virtual DbSet<UserSession> UserSession { get; set; }
         public virtual DbSet<ForgotPasswordToken> ForgotPasswordToken { get; set; }
         public virtual DbSet<Roles> Role { get; set; }
+        public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<Actions> Actions { get; set; }
         public virtual DbSet<RolePermissionMapping> RolePermissionMapping { get; set; }
@@ -48,6 +49,11 @@ namespace MH.DataAccess
             {
                 entity.HasKey(x => x.RoleID);
                 entity.ToTable("Role");
+            });
+            modelBuilder.Entity<Gender>(entity =>
+            {
+                entity.HasKey(x => x.GenderID);
+                entity.ToTable("Gender");
             });
             modelBuilder.Entity<Permission>(entity =>
             {
