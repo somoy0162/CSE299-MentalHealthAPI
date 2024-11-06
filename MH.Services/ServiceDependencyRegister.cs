@@ -21,6 +21,7 @@ namespace MH.Services
             services.AddScoped<IPermissionService, PermissionService>();
             services.AddScoped<IActionsService, ActionsService>();
             services.AddScoped<ICounselorDirectoryService, CounselorDirectoryService>();
+            services.AddScoped<IResourcesService, ResourcesService>();
         }
     }
 }
