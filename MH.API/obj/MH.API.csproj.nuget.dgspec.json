@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\MH\\MH.API\\MH.API\\MH.API.csproj": {}
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\MH.API.csproj": {}
   },
   "projects": {
-    "F:\\MH\\MH.API\\MH.API\\MH.API.csproj": {
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\MH.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.API\\MH.API.csproj",
+        "projectUniqueName": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\MH.API.csproj",
         "projectName": "MH.API",
-        "projectPath": "F:\\MH\\MH.API\\MH.API\\MH.API.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.API\\obj\\",
+        "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\MH.API.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,11 +29,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+              "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj": {
+                "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj"
               },
-              "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj"
+              "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\MH.Services.csproj": {
+                "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\MH.Services.csproj"
               }
             }
           }
@@ -89,17 +89,17 @@
         }
       }
     },
-    "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.Common\\obj\\",
+        "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,17 +164,17 @@
         }
       }
     },
-    "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
+        "projectUniqueName": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj",
         "projectName": "MH.DataAccess",
-        "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.DataAccess\\obj\\",
+        "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -189,8 +189,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+              "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj"
               }
             }
           }
@@ -247,17 +247,17 @@
         }
       }
     },
-    "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj": {
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\MH.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
+        "projectUniqueName": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\MH.Services.csproj",
         "projectName": "MH.Services",
-        "projectPath": "F:\\MH\\MH.API\\MH.Services\\MH.Services.csproj",
-        "packagesPath": "C:\\Users\\UseR\\.nuget\\packages\\",
-        "outputPath": "F:\\MH\\MH.API\\MH.Services\\obj\\",
+        "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\MH.Services.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\UseR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -272,11 +272,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.Common\\MH.Common.csproj"
+              "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": {
+                "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj"
               },
-              "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj": {
-                "projectPath": "F:\\MH\\MH.API\\MH.DataAccess\\MH.DataAccess.csproj"
+              "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj": {
+                "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.DataAccess\\MH.DataAccess.csproj"
               }
             }
           }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {}
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": {}
   },
   "projects": {
-    "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj": {
+    "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
+        "projectUniqueName": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
         "projectName": "MH.Common",
-        "projectPath": "D:\\Datavanced\\MH.API\\MH.Common\\MH.Common.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "D:\\Datavanced\\MH.API\\MH.Common\\obj\\",
+        "projectPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\MH.Common.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\CSE299-MentalHealthAPI\\MH.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -74,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
