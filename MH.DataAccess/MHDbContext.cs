@@ -22,10 +22,12 @@ namespace MH.DataAccess
         public virtual DbSet<UserSession> UserSession { get; set; }
         public virtual DbSet<ForgotPasswordToken> ForgotPasswordToken { get; set; }
         public virtual DbSet<Roles> Role { get; set; }
+        public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<Actions> Actions { get; set; }
         public virtual DbSet<RolePermissionMapping> RolePermissionMapping { get; set; }
         public virtual DbSet<RoleActionMapping> RoleActionMapping { get; set; }
+        public virtual DbSet<Resources> Resources { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -49,6 +51,11 @@ namespace MH.DataAccess
                 entity.HasKey(x => x.RoleID);
                 entity.ToTable("Role");
             });
+            modelBuilder.Entity<Gender>(entity =>
+            {
+                entity.HasKey(x => x.GenderID);
+                entity.ToTable("Gender");
+            });
             modelBuilder.Entity<Permission>(entity =>
             {
                 entity.HasKey(x => x.PermissionID);
@@ -68,6 +75,11 @@ namespace MH.DataAccess
             {
                 entity.HasKey(x => x.RoleActionMappingID);
                 entity.ToTable("RoleActionMapping");
+            });
+            modelBuilder.Entity<Resources>(entity =>
+            {
+                entity.HasKey(x => x.ID);
+                entity.ToTable("Resources");
             });
         }
     }

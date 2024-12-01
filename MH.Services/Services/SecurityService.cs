@@ -1,4 +1,4 @@
-﻿using MH.Common.Constants;
+using MH.Common.Constants;
 using MH.Common.DTO;
 using MH.Common.Enums;
 using MH.Common.Models;
@@ -81,6 +81,9 @@ namespace MH.Services.Services
                 vmLogin.Token = accessToken.Token;
                 vmLogin.UserName = systemUser.UserName;
                 vmLogin.Role = systemUser.Role;
+                vmLogin.Name = systemUser.Name;
+                vmLogin.Email = systemUser.Email;
+                vmLogin.PhoneNumber = systemUser.PhoneNumber;
                 var permissions = await GetAllPermissionByRoleID(systemUser.Role);
                 responseMessage.ResponseObj = new { vmLogin, permissions };
                 responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;

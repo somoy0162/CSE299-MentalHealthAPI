@@ -1,4 +1,4 @@
-﻿using MH.Common.Constants;
+using MH.Common.Constants;
 using MH.Common.DTO;
 using MH.Common.Enums;
 using MH.Common.Models;
@@ -7,6 +7,8 @@ using MH.DataAccess;
 using MH.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +22,6 @@ namespace MH.Services.Services
     {
         private readonly MHDbContext _dbContext;
         private readonly IConfiguration _configuration;
-        //private readonly IEmailService _emailService;
         public SystemUserService(
             MHDbContext dbContext,
             IConfiguration configuration)
@@ -28,141 +29,7 @@ namespace MH.Services.Services
             _dbContext = dbContext;
             _configuration = configuration;
         }
-        //public async Task<ResponseMessage> SendMailForgotPassword(string userName)
-        //{
-        //    ResponseMessage responseMessage = new ResponseMessage();
-        //    try
-        //    {
-        //        string domainUrl = _configuration.GetSection("Auth").GetSection("DomainUrl").Value.ToString();
-        //        //var userName = vmUser.UserName;
-        //        var systemUser = await GetSystemUserByName(userName);
-        //        if (systemUser == null || string.IsNullOrEmpty(systemUser.Email))
-        //        {
-        //            responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-        //            responseMessage.Message = "We could not found valid user";
-        //            return responseMessage;
-        //        }
-
-        //        string generateToken = GenerateToken(systemUser.ID);
-        //        string resetLink = $"{domainUrl}reset-password/{generateToken}";
-        //        string html = @$"
-        //            <p> Welcome HIH reset password. </p>
-        //            <a href='{resetLink}'>Reset Password</a>";
-
-        //        if (!await _emailService.SendEmailToSendGrid(systemUser.Email, "Password Reset For HIH", "", html))
-        //        {
-        //            responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-        //            responseMessage.Message = "Something went wrong,Please try again later";
-        //            return responseMessage;
-        //        }
-
-        //        await SaveForgotTokenAsync(systemUser.ID, generateToken);
-
-        //        responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
-        //        responseMessage.Message = "We have send a reset password url into mail";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        responseMessage.Message = ex.Message;
-        //        responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-        //    }
-        //    return responseMessage;
-        //}
-
-        public async Task<SystemUsers> GetSystemUserByName(string userName) => await _dbContext.SystemUsers
-            .AsNoTracking().Where(x => x.UserName == userName).FirstOrDefaultAsync();
-
-        private static string GenerateToken(int systemuserId)
-        {
-            string dataToHash = $"{systemuserId}-{DateTime.UtcNow.Ticks}";
-            byte[] dataToHashBytes = Encoding.UTF8.GetBytes(dataToHash);
-
-            using SHA256 sha256 = SHA256.Create();
-            byte[] hashedData = sha256.ComputeHash(dataToHashBytes);
-
-            var builder = new StringBuilder();
-            foreach (byte b in hashedData)
-            {
-                builder.Append(b.ToString("x2"));
-            }
-            return builder.ToString();
-        }
-
-        private async Task<bool> SaveForgotTokenAsync(int userId, string token)
-        {
-            var forgotPassWordToken = new ForgotPasswordToken()
-            {
-                SystemUserID = userId,
-                VerifiedToken = token,
-                IsVerified = false,
-                CreatedAt = DateTime.UtcNow
-            };
-            await _dbContext.ForgotPasswordToken.AddAsync(forgotPassWordToken);
-            return await _dbContext.SaveChangesAsync() > 0;
-        }
-
-        public async Task<ResponseMessage> UpdatePassword(VMForgotPassword vmForgotPassword)
-        {
-            ResponseMessage responseMessage = new ResponseMessage();
-            try
-            {
-                if (!await IsValidToken(vmForgotPassword.Token))
-                {
-                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-                    responseMessage.Message = "Invalid Request";
-                    return responseMessage;
-                }
-
-                var existForgotPasswordToken = await _dbContext
-                    .ForgotPasswordToken
-                    .AsNoTracking()
-                    .FirstOrDefaultAsync(x => x.VerifiedToken == vmForgotPassword.Token);
-
-                if (existForgotPasswordToken is null)
-                {
-                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-                    responseMessage.Message = "Invalid Request";
-                    return responseMessage;
-                }
-
-                var systemUser = await _dbContext
-                    .SystemUsers
-                    .AsNoTracking()
-                    .FirstOrDefaultAsync(x => x.ID == existForgotPasswordToken.SystemUserID);
-
-                if (systemUser is null)
-                {
-                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-                    responseMessage.Message = "Invalid Request";
-                    return responseMessage;
-                }
-
-                systemUser.Password = BCrypt.Net.BCrypt.HashPassword(vmForgotPassword.Password);
-                //systemUser.Password = vmForgotPassword.Password;
-                existForgotPasswordToken.IsVerified = true;
-                _dbContext.SystemUsers.Update(systemUser);
-                _dbContext.ForgotPasswordToken.Update(existForgotPasswordToken);
-                await _dbContext.SaveChangesAsync();
-
-                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
-                responseMessage.Message = MessageConstant.SavedSuccessfully;
-            }
-            catch (Exception ex)
-            {
-                responseMessage.Message = ex.Message;
-                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
-            }
-            return responseMessage;
-        }
-
-        private async Task<bool> IsValidToken(string token)
-        {
-            var currentTime = DateTime.UtcNow;
-            return await _dbContext
-                .ForgotPasswordToken
-                .AnyAsync(x => x.VerifiedToken == token && !x.IsVerified.Value && EF.Functions.DateDiffMinute(currentTime, x.CreatedAt) <= 5);
-        }
-
+       
         public async Task<ResponseMessage> GetAllSystemUser()
         {
             ResponseMessage responseMessage = new ResponseMessage();
@@ -181,7 +48,11 @@ namespace MH.Services.Services
                         RoleName = _dbContext.Role
                                     .Where(r => r.RoleID == x.Role)
                                     .Select(r => r.RoleName)
-                                    .FirstOrDefault()
+                                    .FirstOrDefault(),
+                        GenderName = _dbContext.Gender
+                                      .Where(g => g.GenderID == x.Gender)
+                                      .Select(g => g.GenderName)
+                                      .FirstOrDefault()
                     })
                     .ToListAsync();
 
@@ -297,6 +168,96 @@ namespace MH.Services.Services
                 responseMessage.Message = ex.Message;
                 responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
             }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> UpdatePersonalDetails(VMLogin user)
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                var existing = await _dbContext
+                    .SystemUsers
+                    .Where(x => x.ID == user.SystemUserID)
+                    .FirstOrDefaultAsync();
+
+                existing.Name = user.Name;
+                existing.PhoneNumber = user.PhoneNumber;
+                existing.Email = user.Email;
+
+                _dbContext.Update(existing);
+                await _dbContext.SaveChangesAsync();
+                responseMessage.ResponseObj = existing;
+                responseMessage.Message = "Save Changes successfully";
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> UpdatePassword(VMPasswordChange param)
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                if (param.NewPassword != param.ConfirmPassword)
+                {
+                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+                    responseMessage.Message = "New password and confirm password doesn't match";
+                    return responseMessage;
+                }
+
+                SystemUsers existing = await _dbContext
+                    .SystemUsers
+                    .Where(x => x.ID == param.SystemUserID)
+                    .FirstOrDefaultAsync();
+
+                if (!BCrypt.Net.BCrypt.Verify(param.CurrentPassword, existing.Password))
+                {
+                    responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+                    responseMessage.Message = "Current password incorrect";
+                    return responseMessage;
+                }
+
+                existing.Password = BCrypt.Net.BCrypt.HashPassword(param.NewPassword);
+
+                _dbContext.Update(existing);
+                await _dbContext.SaveChangesAsync();
+                responseMessage.ResponseObj = existing;
+                responseMessage.Message = "Save password successfully";
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+            return responseMessage;
+        }
+
+        public async Task<ResponseMessage> GetAllGender()
+        {
+            ResponseMessage responseMessage = new ResponseMessage();
+            try
+            {
+                List<Gender> genders = new List<Gender>();
+                genders = await _dbContext
+                    .Gender
+                    .OrderBy(x => x.GenderID)
+                    .ToListAsync();
+                responseMessage.ResponseObj = genders;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Success;
+            }
+            catch (Exception ex)
+            {
+                responseMessage.Message = ex.Message;
+                responseMessage.ResponseCode = (int)Enums.ResponseCode.Failed;
+            }
+
             return responseMessage;
         }
     }
